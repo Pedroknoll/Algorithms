@@ -1,4 +1,17 @@
 /**
+* @function assertEqual
+* @description Helper function to test if callback returns a given value.
+* @param {function} callback
+* @param {int} resultNum
+*/
+function assertEqual(callback, resultNum) {
+  if (callback !== resultNum) {
+    throw new Error('values are not equal');
+  }
+  console.log('Passed in the test case');
+}
+
+/**
 * @function doSearch
 * @description Find the number index if it is present into the array.
 * @param {array} numArray
