@@ -18,6 +18,7 @@ function findMinValueIndex(numArray, startIndex){
   return minIndex;
 };
 
+
 /**
 * @function swapElements
 * @description Swap positions beetween two elements into an array
@@ -32,7 +33,19 @@ function swapElements(numArray, firstIndex, secondIndex){
 };
 
 
-// Test Cases
+// Tests Setup
+testArray = [20,3,5,10,200,5000,23,6432];
+
+// Test Cases for findMinValueIndex
+assertEqual(findMinValueIndex(testArray, 0),1);
+assertEqual(findMinValueIndex(testArray, 5),6);
+
+// Test Case for swapElements
+swapElements(testArray,0,1);
+assertEqualArray(testArray,[3, 20, 5, 10, 200, 5000, 23, 6432]);
+
+
+// Helper functions to test
 /**
 * @function assertEqual
 * @description Helper function to test if callback returns a given value.
@@ -46,7 +59,26 @@ function assertEqual(callback, resultNum) {
   console.log('Passed in the test case');
 }
 
-// Test Cases for findMinValueIndex
-testArray = [20,3,5,10,200,5000,23,6432];
-assertEqual(findMinValueIndex(testArray, 0),1);
-assertEqual(findMinValueIndex(testArray, 5),6);
+/**
+* @function assertEqualArray
+* @description Helper function to compare two objects and affirm that both are
+* identicals arrays
+* @param {array} firstArray
+* @param {array} secondArray
+*/
+function assertEqualArray(firstArray, secondArray){
+  if (!(firstArray instanceof Array) || !(secondArray instanceof Array)){
+    throw new Error('One or both of params not are an array');
+  } else {
+    if (firstArray.length != secondArray.length){
+      throw new Error("The array's length don't match");
+    } else {
+      for (var i = 0; i < firstArray.length; i++){
+        if(firstArray[i] != secondArray[i]){
+          throw new Error("The array's aren't equal");
+        }
+      }
+      console.log('Arrays are equal. Passed in the test case')
+    }
+  }
+};
