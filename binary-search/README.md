@@ -1,4 +1,4 @@
-# Binary-Search
+# Binary Search
 
 ### Problem
 Search if a number is present in an array. If it is the case, find the index of the element.
