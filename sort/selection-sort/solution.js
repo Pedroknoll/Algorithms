@@ -9,8 +9,8 @@ function findMinValueIndex(numArray, startIndex){
   var minIndex = startIndex;
   var minValue = numArray[startIndex];
 
-  for(nextIndex = startIndex + 1; nextIndex < numArray.lenght; nextIndex++){
-    if(nextIndex < minIndex){
+  for(nextIndex = minIndex + 1; nextIndex < numArray.length; nextIndex++){
+    if(numArray[nextIndex] < minValue){
       minIndex = nextIndex;
       minValue = numArray[nextIndex];
     }
@@ -31,3 +31,8 @@ function assertEqual(callback, resultNum) {
   }
   console.log('Passed in the test case');
 }
+
+// Test Cases for findMinValueIndex
+testArray = [20,3,5,10,200,5000,23,6432];
+assertEqual(findMinValueIndex(testArray, 0),1);
+assertEqual(findMinValueIndex(testArray, 5),6);
