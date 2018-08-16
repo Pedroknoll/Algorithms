@@ -33,14 +33,26 @@ function swapElements(numArray, firstIndex, secondIndex){
 };
 
 
-// Tests Setup
-testArray = [20,3,5,10,200,5000,23,6432];
+/**
+* @function sortSelection
+* @description Organize the elements of an array in ascending order.
+* @param {array} array
+*/
+function sortSelection(array){
+  var minValueIndex;
+  for(var currentIndex = 0; currentIndex < array.length; currentIndex++){
+    minValueIndex = findMinValueIndex(array, currentIndex);
+    swapElements(array, currentIndex, minValueIndex);
+  }
+};
 
 // Test Cases for findMinValueIndex
+var testArray = [20,3,5,10,200,5000,23,6432];
 assertEqual(findMinValueIndex(testArray, 0),1);
 assertEqual(findMinValueIndex(testArray, 5),6);
 
 // Test Case for swapElements
+testArray = [20,3,5,10,200,5000,23,6432];
 swapElements(testArray,0,1);
 assertEqualArray(testArray,[3, 20, 5, 10, 200, 5000, 23, 6432]);
 
