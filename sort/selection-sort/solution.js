@@ -56,6 +56,11 @@ testArray = [20,3,5,10,200,5000,23,6432];
 swapElements(testArray,0,1);
 assertEqualArray(testArray,[3, 20, 5, 10, 200, 5000, 23, 6432]);
 
+// Test Case for sortSelection
+testArray = [20,3,5,10,200,5000,23,6432];
+sortSelection(testArray);
+assertEqualArray(testArray,[3, 5, 10, 20, 23, 200, 5000, 6432]);
+
 
 // Helper functions to test
 /**
