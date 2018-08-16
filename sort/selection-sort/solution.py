@@ -30,7 +30,6 @@ def min_value_index(array, start_index):
             min_index = next_index
             min_value = array[next_index]
         next_index += 1
-    print(min_index)
     return min_index
 
 
@@ -42,6 +41,10 @@ class TestSwapElement(unittest.TestCase):
         swaped_array = swap_elements(test_array,0, 1)
         self.assertEqual(swaped_array, [3,10,2,6])
 
+    def test_min_value_index_in_subarray(self):
+        test_array = [10,3,6,20,1]
+        index = min_value_index(test_array,0)
+        self.assertEqual(index,4)
 
 if __name__ == '__main__':
     unittest.main()
