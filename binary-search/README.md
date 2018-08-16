@@ -1,7 +1,7 @@
-# Prime Number Finder
+# Binary-Search
 
 ### Problem
-Given a chosen prime number in an array of prime numbers, find the quantity of elements into the array smaller than the chosen prime number.
+Search if a number is present in an array. If it is the case, find the index of the element.
 
 ### Pseudocode
 
