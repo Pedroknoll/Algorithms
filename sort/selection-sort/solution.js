@@ -16,7 +16,21 @@ function findMinValueIndex(numArray, startIndex){
     }
   }
   return minIndex;
-}
+};
+
+/**
+* @function swapElements
+* @description Swap positions beetween two elements into an array
+* @param {array} numArray
+* @param {int} firstIndex
+* @param {int} secondIndex
+*/
+function swapElements(numArray, firstIndex, secondIndex){
+  temp = numArray[firstIndex];
+  numArray[firstIndex] = numArray[secondIndex];
+  numArray[secondIndex] = temp;
+};
+
 
 // Test Cases
 /**
