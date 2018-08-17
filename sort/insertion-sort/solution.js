@@ -11,4 +11,40 @@ function insert(array, rightIndex, value){
     array[index + 1] = array[index];
   }
   array[index + 1] = value;
+  return array;
 }
+
+
+
+
+// Test Cases for insert function
+var testArray = [0,3,5];
+var arrayAfterSort = insert(testArray,2,1);
+assertEqualArray(arrayAfterSort,[0,1,3,5]);
+
+
+
+// Helper functions to test
+/**
+* @function assertEqualArray
+* @description Helper function to compare two objects and affirm that both are
+* identicals arrays
+* @param {array} firstArray
+* @param {array} secondArray
+*/
+function assertEqualArray(firstArray, secondArray){
+  if (!(firstArray instanceof Array) || !(secondArray instanceof Array)){
+    throw new Error('One or both of params not are an array');
+  } else {
+    if (firstArray.length != secondArray.length){
+      throw new Error("The array's length don't match");
+    } else {
+      for (var i = 0; i < firstArray.length; i++){
+        if(firstArray[i] != secondArray[i]){
+          throw new Error("The array's aren't equal");
+        }
+      }
+      console.log('Arrays are equal. Passed in the test case')
+    }
+  }
+};
