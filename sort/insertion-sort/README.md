@@ -12,5 +12,6 @@ subarray in index 0.
 subarray in indices 0 through 1.
 3. Call insert to insert the element that starts at index 3 into the sorted
 subarray in indices 0 through 2.
-4. Finally, call insert to insert the element that starts at index n-1 n−1n,
+4. ...
+5. Finally, call insert to insert the element that starts at index n-1 n−1n,
 minus, 1 into the sorted subarray in indices 0 through n-2 n−2n, minus, 2.
