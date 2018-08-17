@@ -26,5 +26,10 @@ class TestInsertSort(unittest.TestCase):
         sorted_array = insert(test_array,2, 1)
         self.assertEqual(sorted_array,[0,1,3,4])
 
+    def test_insert_sort(self):
+        test_array = [0,2,5,1,4,3]
+        sorted_array = insert_sort(test_array)
+        self.assertEqual(sorted_array,[0,1,2,3,4,5])
+
 if __name__ == '__main__':
     unittest.main()
