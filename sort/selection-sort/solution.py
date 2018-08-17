@@ -44,7 +44,7 @@ def sort_selection(array):
 
 
 
-class TestSwapElement(unittest.TestCase):
+class TestSelectionSort(unittest.TestCase):
 
     def test_swap_elements_in_array(self):
         test_array = [10,3,2,6]
