@@ -2,6 +2,12 @@ import unittest
 
 # Do the loop as long as be possible the number is within the array.
 def do_search(nums_array, target_num):
+    """Search a specific num in an array using binary search approach
+
+    Arguments:
+    nums_array -- target array
+    target_num -- the num to search
+    """
     min_index = 0;
     max_index = len(nums_array) - 1
     nums_array = sorted(nums_array) # order the array
