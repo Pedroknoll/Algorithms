@@ -1,6 +1,6 @@
 /**
 * @function insert
-* @description Function to ordering a given array using insert sort approach
+* @description Function to inserting a value into a sorted subarray
 * @param {array} array
 * @param {int} rigthIndex
 * @param {int} value
@@ -12,8 +12,18 @@ function insert(array, rightIndex, value){
   }
   array[index + 1] = value;
   return array;
-}
+};
 
+/**
+* @function insertSort
+* @description Function to sort an array in ascending order
+* @param {array}
+*/
+function insertSort(array){
+  for(var i = 1; i < array.length; i++){
+    insert(array, i-1, array[i]);
+  }
+};
 
 
 
@@ -21,7 +31,6 @@ function insert(array, rightIndex, value){
 var testArray = [0,3,5];
 var arrayAfterSort = insert(testArray,2,1);
 assertEqualArray(arrayAfterSort,[0,1,3,5]);
-
 
 
 // Helper functions to test
