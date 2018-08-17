@@ -56,5 +56,10 @@ class TestSwapElement(unittest.TestCase):
         index = min_value_index(test_array,0)
         self.assertEqual(index,4)
 
+    def test_sort_selection(self):
+        test_array = [10, 3, 6, 20, 1]
+        sorted_array = sort_selection(test_array)
+        self.assertEqual(sorted_array,[1,3,6,10,20])
+
 if __name__ == '__main__':
     unittest.main()
