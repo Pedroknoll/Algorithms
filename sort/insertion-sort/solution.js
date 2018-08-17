@@ -23,14 +23,20 @@ function insertSort(array){
   for(var i = 1; i < array.length; i++){
     insert(array, i-1, array[i]);
   }
+  return array;
 };
 
 
 
 // Test Cases for insert function
 var testArray = [0,3,5];
-var arrayAfterSort = insert(testArray,2,1);
-assertEqualArray(arrayAfterSort,[0,1,3,5]);
+var sortedArray = insert(testArray,2,1);
+assertEqualArray(sortedArray,[0,1,3,5]);
+
+// Test Cases for insertSort function
+var testArray = [0,7,3,5];
+var sortedArray = insertSort(testArray);
+assertEqualArray(sortedArray,[0,3,5,7]);
 
 
 // Helper functions to test
