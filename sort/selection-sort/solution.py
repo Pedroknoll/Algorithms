@@ -33,6 +33,16 @@ def min_value_index(array, start_index):
     return min_index
 
 
+def sort_selection(array):
+    """Return the array ascending ordered """
+    current_index = 0;
+    while current_index < len(array):
+        min_index = min_value_index(array, current_index)
+        swap_elements(array, current_index, min_index)
+        current_index += 1
+    return array
+
+
 
 class TestSwapElement(unittest.TestCase):
 
