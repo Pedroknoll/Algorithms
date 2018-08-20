@@ -33,7 +33,7 @@ def min_value_index(array, start_index):
     return min_index
 
 
-def sort_selection(array):
+def selection_sort(array):
     """Return the array ascending ordered """
     current_index = 0;
     while current_index < len(array):
@@ -56,9 +56,9 @@ class TestSelectionSort(unittest.TestCase):
         index = min_value_index(test_array,0)
         self.assertEqual(index,4)
 
-    def test_sort_selection(self):
+    def test_selection_sort(self):
         test_array = [10, 3, 6, 20, 1]
-        sorted_array = sort_selection(test_array)
+        sorted_array = selection_sort(test_array)
         self.assertEqual(sorted_array,[1,3,6,10,20])
 
 if __name__ == '__main__':

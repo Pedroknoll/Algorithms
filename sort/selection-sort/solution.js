@@ -1,11 +1,11 @@
 /**
-* @function findMinValueIndex
+* @function minValueIndex
 * @description Find the index of the minimum value from an array at a given
 * start index
 * @param {array} numArray
 * @param {int} startIndex
 */
-function findMinValueIndex(numArray, startIndex){
+function minValueIndex(numArray, startIndex){
   var minIndex = startIndex;
   var minValue = numArray[startIndex];
 
@@ -34,31 +34,31 @@ function swapElements(numArray, firstIndex, secondIndex){
 
 
 /**
-* @function sortSelection
+* @function selectionSort
 * @description Organize the elements of an array in ascending order.
 * @param {array} array
 */
-function sortSelection(array){
+function selectionSort(array){
   var minValueIndex;
   for(var currentIndex = 0; currentIndex < array.length; currentIndex++){
-    minValueIndex = findMinValueIndex(array, currentIndex);
+    minValueIndex = minValueIndex(array, currentIndex);
     swapElements(array, currentIndex, minValueIndex);
   }
 };
 
-// Test Cases for findMinValueIndex
+// Test Cases for minValueIndex
 var testArray = [20,3,5,10,200,5000,23,6432];
-assertEqual(findMinValueIndex(testArray, 0),1);
-assertEqual(findMinValueIndex(testArray, 5),6);
+assertEqual(minValueIndex(testArray, 0),1);
+assertEqual(minValueIndex(testArray, 5),6);
 
 // Test Case for swapElements
 testArray = [20,3,5,10,200,5000,23,6432];
 swapElements(testArray,0,1);
 assertEqualArray(testArray,[3, 20, 5, 10, 200, 5000, 23, 6432]);
 
-// Test Case for sortSelection
+// Test Case for selectionSort
 testArray = [20,3,5,10,200,5000,23,6432];
-sortSelection(testArray);
+selectionSort(testArray);
 assertEqualArray(testArray,[3, 5, 10, 20, 23, 200, 5000, 6432]);
 
 
