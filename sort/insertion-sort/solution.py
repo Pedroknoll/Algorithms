@@ -1,13 +1,13 @@
 import unittest
 
-""" Function to insert a value into a subarray so that it is sorted
-
-Arguments:
-array -- the target array
-right_index -- the right index to form the subarray
-value -- the value to be insert into the array
-"""
 def insert(array, right_index, value):
+    """ Function to insert a value into a subarray so that it is sorted
+
+    Arguments:
+    array -- the target array
+    right_index -- the right index to form the subarray
+    value -- the value to be insert into the array
+    """
     index = right_index
     while (index >= 0) and (array[index] > value):
         if index == len(array) - 1:
@@ -17,6 +17,15 @@ def insert(array, right_index, value):
         index -= 1
     array[index + 1] = value
     return array
+
+
+def insert_sort(array):
+    """ Function to sort an array in ascending order
+
+    Arguments:
+    array -- the target array
+    """
+    print('abacate')
 
 
 class TestInsertSort(unittest.TestCase):
